@@ -1,5 +1,13 @@
-const Page = () => {
-  return <div className="">Hello world</div>;
+import prisma from "@/lib/db";
+
+const Page = async () => {
+  const users = await prisma.user.findMany();
+
+  return (
+    <div className="">
+      <pre>{JSON.stringify(users, null, 2)}</pre>
+    </div>
+  );
 };
 
 export default Page;
