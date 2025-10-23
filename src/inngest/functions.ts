@@ -1,4 +1,4 @@
-import { inngest } from "@/src/inngest/client";
+import { inngest } from "@/inngest/client";
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { generateText } from "ai";
 import { createOpenAI } from "@ai-sdk/openai";
