@@ -58,7 +58,7 @@ export const Editor = ({ workflowId }: { workflowId: string }) => {
     []
   );
 
-  const hasmanualTrigger = useMemo(() => {
+  const hasManualTrigger = useMemo(() => {
     return nodes.some((node) => node.type === NodeType.MANUAL_TRIGGER);
   }, [nodes]);
 
@@ -85,7 +85,7 @@ export const Editor = ({ workflowId }: { workflowId: string }) => {
         <Panel position="top-right">
           <AddNodeButton />
         </Panel>
-        {hasmanualTrigger && (
+        {hasManualTrigger && (
           <Panel position="bottom-center">
             <ExecuteWorkFlowButton workflowId={workflowId} />
           </Panel>
